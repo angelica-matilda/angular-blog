@@ -9,31 +9,6 @@ Structure:
 3. content-box : background color, width of the box etc
 4. blog-content -display flex in the direction you want
 
-.blog-container {
-  width: 65vw; /* remove this div?*/
-}
-
-.blog-content {
-  display: flex;
-  margin: 50px;
-  padding: 20px;
-}
-
-<main class="full-page">
-  <div class="blog-container">
-    <div class="content-box" *ngFor="let post of blogPosts">
-      <div class="blog-content">
-        <img [src]="post.thumbnailUrl" [alt]="post.title" />
-        <div class="blog-text">
-          <h2>{{ post.title }}</h2>
-          <p>{{ post.body }}</p>
-          <button [routerLink]="['/blog', post.id]">Read more</button>
-        </div>
-      </div>
-    </div>
-    </div>
-</main>
-
 
 - Done:
 KLAR Navbar
@@ -43,7 +18,7 @@ KLAR About me - info about me
          - form to contact me
 Page for individual posts
         - KLAR display by id
-        - buttons for likes/dislikes
+        - KLAR buttons for likes/dislikes increment
         - comments
         - Functionality to add comments
 
@@ -61,16 +36,15 @@ Kommentarer
 Visa upp alla kommentarer (anonyma, de visar inte vem som har skapat dem)
 Ett valfritt sätt att lägga till nya kommentarer (anonyma)
 En knapp/länk för att navigera tillbaka till huvudsidan
-Ett sätt att gilla och ogilla blogginlägget (räknas oändligt, det finns ingen gräns på antal likes/dislikes)
 
 Ägarens perspektiv innehåller allt som användaren har, men har en till vy:
-
 En till vy för att skapa nya inlägg på valfritt sätt.
 
 Blogginlägg
 Alla blogginlägg har följande struktur (men du får gärna lägga till fler saker):
 
 {
+  id: number
   title: string;
   thumbnailUrl: string;
   body: string;
@@ -84,4 +58,4 @@ De skall sparas i localStorage för att du skall kunna ladda om Appen utan att t
 Övrig information
 Det finns ingen "inloggning" och inga användare även om det finns ett användarperspektiv
 Lägg gärna till fler saker i Appen
-När man är inne på användarens perspektiv så ser man inget ifrån ägarens perspektiv
+När man är inne på användarens perspektiv så ser man inget ifrån ägarens perspektiv.

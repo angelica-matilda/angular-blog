@@ -10,6 +10,7 @@ import { BlogPostsService } from '../services/blog-posts.service';
 })
 export class IndividualBlogPostComponent implements OnInit {
   post: BlogPost | null = null;
+  comments: string[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -19,5 +20,21 @@ export class IndividualBlogPostComponent implements OnInit {
   ngOnInit(): void {
     const id = +this.route.snapshot.paramMap.get('id')!; // Get the ID from the route
     this.post = this.BlogPostsService.getBlogPostById(id)!; // Retrieve the blog post data from the service
-}
+    this.comments = this.post?.comments || [];
+  }
+
+  // Call this function when the like button is clicked
+  incrementLikes(id: number | undefined): void {
+    if (id !== undefined) {
+      this.BlogPostsService.incrementLikes(id);
+      this.post = this.BlogPostsService.getBlogPostById(id); // Update the post with the updated likes count
+    }
+  }
+
+  incrementDislikes(id: number | undefined): void {
+    if (id !== undefined) {
+      this.BlogPostsService.incrementDislikes(id);
+      this.post = this.BlogPostsService.getBlogPostById(id); // Update the post with the updated likes count
+    }
+  }
 }

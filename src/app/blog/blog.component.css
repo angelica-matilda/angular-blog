@@ -4,16 +4,17 @@
 
 .blog-content {
   display: flex;
-  margin: 50px;
-  padding: 20px;
+  margin: 3.125rem;
+  padding: 1.25rem;
 }
 
 .blog-text {
-  margin-left: 50px;
+  margin-left: 3.125rem;
 }
 
 img {
-  height: 400px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 25rem;
+  width:23rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
 }
 

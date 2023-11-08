@@ -5,9 +5,9 @@ footer {
   align-items: center;
   bottom: 0;
   z-index: 1;
-  border-top: 1px solid black;
+  border-top: 0.0625rem solid black;
   width: 100vw;
-  height: 100px;
+  height: 6.25rem;
 }
 
 ul {
@@ -15,7 +15,7 @@ ul {
 }
 
 ul li:not(:first-child) {
-  margin-left: 30px;
+  margin-left: 1.875rem;
 }
 
 

@@ -6,16 +6,19 @@
         <img class="book-image" [src]="post?.thumbnailUrl" [alt]="post?.title" />
         <div class="blog-text">
           <p>{{ post?.body }}</p>
-          <p>Created: {{ post?.creationDate }}</p>
-          <button>
+          <p>Created: {{ post?.creationDate | date: 'yyyy-MM-dd'}}</p>
+          <button (click)="incrementLikes(post?.id)">
             <img class="reaction-icon" src="../../assets/likewhite.png" alt="" />
             {{ post?.likes }}
           </button>
-          <button>
+          <button (click)="incrementDislikes(post?.id)">
             <img class="reaction-icon" src="../../assets/dislikewhite.png" alt="" />
             {{ post?.dislikes }}
           </button>
-          <p>Comments: {{ post?.comments }}</p>
+          <p>Comments:</p>
+          <ul>
+            <li *ngFor="let comment of comments">- {{ comment }}</li>
+          </ul>
           <input type="text">
         </div>
       </div>
