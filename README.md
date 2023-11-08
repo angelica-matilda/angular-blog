@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# angular-blog
-=======
 Background color: #333333
 
 Övrigt:
@@ -88,4 +85,3 @@ De skall sparas i localStorage för att du skall kunna ladda om Appen utan att t
 Det finns ingen "inloggning" och inga användare även om det finns ett användarperspektiv
 Lägg gärna till fler saker i Appen
 När man är inne på användarens perspektiv så ser man inget ifrån ägarens perspektiv
->>>>>>> ce9b203 (Implementing book nook blog (wip))
