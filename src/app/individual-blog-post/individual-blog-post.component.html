@@ -1,0 +1,24 @@
+<main class="full-page">
+  <div class="blog-container">
+    <div class="content-box" >
+      <div class="blog-content">
+        <h2>{{ post?.title }}</h2>
+        <img class="book-image" [src]="post?.thumbnailUrl" [alt]="post?.title" />
+        <div class="blog-text">
+          <p>{{ post?.body }}</p>
+          <p>Created: {{ post?.creationDate }}</p>
+          <button>
+            <img class="reaction-icon" src="../../assets/likewhite.png" alt="" />
+            {{ post?.likes }}
+          </button>
+          <button>
+            <img class="reaction-icon" src="../../assets/dislikewhite.png" alt="" />
+            {{ post?.dislikes }}
+          </button>
+          <p>Comments: {{ post?.comments }}</p>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+    </div>
+</main>

@@ -1,0 +1,36 @@
+h2 {
+  margin: 40px 0px 40px 0px;
+  font-size: 20px;
+  color: white;
+  padding-bottom: 10px;
+  border-bottom: 2px solid white;
+}
+
+img {
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.book-image {
+  margin-bottom: 30px;
+}
+
+.blog-container {
+  width: 65vw; /* remove this div?*/
+}
+
+.blog-content {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+  margin: 50px;
+  padding: 20px;
+}
+
+.reaction-icon {
+  height: 25px;
+  border: none;
+  box-shadow: none;
+  margin-right: 10px;
+}

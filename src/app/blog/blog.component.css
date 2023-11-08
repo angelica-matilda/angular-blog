@@ -1,0 +1,19 @@
+.blog-container {
+  width: 65vw; /* remove this div?*/
+}
+
+.blog-content {
+  display: flex;
+  margin: 50px;
+  padding: 20px;
+}
+
+.blog-text {
+  margin-left: 50px;
+}
+
+img {
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
