@@ -133,6 +133,14 @@ export class BlogPostsService {
     }
   }
 
+  addComment(id: number, comment: string): void {
+    const post = this.blogPosts.find((p) => p.id === id);
+    if (post) {
+      post.comments.push(comment);
+      this.updateLocalStorage();
+    }
+  }
+
   // Function to update the local storage with the current blog posts data
   private updateLocalStorage(): void {
     localStorage.setItem('blogPosts', JSON.stringify(this.blogPosts));

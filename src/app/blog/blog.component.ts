@@ -9,5 +9,5 @@ import { BlogPostsService } from '../services/blog-posts.service';
 export class BlogComponent {
   constructor(private blogPostsService: BlogPostsService) {}
 
-  blogPosts = this.blogPostsService.getBlogPosts(); 
+  blogPosts = this.blogPostsService.getBlogPosts();
 }

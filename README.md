@@ -1,8 +1,5 @@
 Background color: #333333
 
-Övrigt:
-Ska man kunna trycka på hela inlägget för att öppna bloginlägget som detalj?
-
 Structure:
 1. full-page : height, width, center things on the page with flex
 2. blog-container - width, can remove?

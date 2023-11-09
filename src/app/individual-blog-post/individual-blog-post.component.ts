@@ -11,6 +11,8 @@ import { BlogPostsService } from '../services/blog-posts.service';
 export class IndividualBlogPostComponent implements OnInit {
   post: BlogPost | null = null;
   comments: string[] = [];
+  newComment: string = '';
+
 
   constructor(
     private route: ActivatedRoute,
@@ -35,6 +37,14 @@ export class IndividualBlogPostComponent implements OnInit {
     if (id !== undefined) {
       this.BlogPostsService.incrementDislikes(id);
       this.post = this.BlogPostsService.getBlogPostById(id); // Update the post with the updated likes count
+    }
+  }
+
+  addComment(): void {
+    if (this.post && this.newComment.trim() !== '') {
+      this.BlogPostsService.addComment(this.post.id, this.newComment);
+      this.comments = this.post.comments || [];
+      this.newComment = ''; // Clear the input field after adding the comment
     }
   }
 }

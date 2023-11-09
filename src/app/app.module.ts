@@ -8,9 +8,10 @@ import { FooterComponent } from './footer/footer.component';
 import { BlogComponent } from './blog/blog.component';
 import { AboutComponent } from './about/about.component';
 import { CreateComponent } from './create/create.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IndividualBlogPostComponent } from './individual-blog-post/individual-blog-post.component';
 import { BlogPostsService } from './services/blog-posts.service';
+import { SliceWordsPipe } from './slice-bodytext.pipe';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,13 @@ import { BlogPostsService } from './services/blog-posts.service';
     AboutComponent,
     CreateComponent,
     IndividualBlogPostComponent,
+    SliceWordsPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [BlogPostsService],
   bootstrap: [AppComponent],

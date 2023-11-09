@@ -19,9 +19,10 @@
           <ul>
             <li *ngFor="let comment of comments">- {{ comment }}</li>
           </ul>
-          <input type="text">
+          <input type="text" [(ngModel)]="newComment" />
+          <button (click)="addComment()">Add Comment</button>
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </main>
