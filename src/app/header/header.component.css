@@ -39,6 +39,7 @@ ul li:not(:first-child) {
   position: relative;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
 }
 
 .headerlink::before {

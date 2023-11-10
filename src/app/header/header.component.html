@@ -11,8 +11,13 @@
     <li>
       <a class="headerlink" routerLink="/about">ABOUT</a>
     </li>
-    <li>
-      <a class="headerlink" routerLink="/create">LOGIN</a>
+    <li> <!-- display login/logout depending on status-->
+      <ng-container *ngIf="!authService.isLoggedIn(); else loggedInTemplate">
+        <a class="headerlink" routerLink="/login">LOGIN</a>
+      </ng-container>
+      <ng-template #loggedInTemplate>
+        <a class="headerlink" (click)="logout()">LOGOUT</a>
+      </ng-template>
     </li>
   </ul>
 </div>

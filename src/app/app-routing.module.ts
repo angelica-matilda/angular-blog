@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { BlogComponent } from './blog/blog.component';
 import { CreateComponent } from './create/create.component';
 import { IndividualBlogPostComponent } from './individual-blog-post/individual-blog-post.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -15,12 +16,16 @@ const routes: Routes = [
     component: AboutComponent,
   },
   {
-    path: "create",
-    component: CreateComponent,
+    path: "login",
+    component: LoginComponent,
   },
   {
     path: 'blog/:id',
     component: IndividualBlogPostComponent,
+  },
+  {
+    path: "create",
+    component: CreateComponent,
   },
 ];
 

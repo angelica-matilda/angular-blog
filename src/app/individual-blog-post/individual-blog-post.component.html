@@ -1,26 +1,44 @@
 <main class="full-page">
   <div class="blog-container">
-    <div class="content-box" >
+    <div class="content-box">
       <div class="blog-content">
         <h2>{{ post?.title }}</h2>
-        <img class="book-image" [src]="post?.thumbnailUrl" [alt]="post?.title" />
+        <img
+          class="book-image"
+          [src]="post?.thumbnailUrl"
+          [alt]="post?.title"
+        />
         <div class="blog-text">
+          <p class="created-date">
+            Published: {{ post?.creationDate | date : "yyyy-MM-dd" }}
+          </p>
           <p>{{ post?.body }}</p>
-          <p>Created: {{ post?.creationDate | date: 'yyyy-MM-dd'}}</p>
-          <button (click)="incrementLikes(post?.id)">
-            <img class="reaction-icon" src="../../assets/likewhite.png" alt="" />
-            {{ post?.likes }}
-          </button>
-          <button (click)="incrementDislikes(post?.id)">
-            <img class="reaction-icon" src="../../assets/dislikewhite.png" alt="" />
-            {{ post?.dislikes }}
-          </button>
-          <p>Comments:</p>
-          <ul>
-            <li *ngFor="let comment of comments">- {{ comment }}</li>
-          </ul>
-          <input type="text" [(ngModel)]="newComment" />
-          <button (click)="addComment()">Add Comment</button>
+          <div class="reaction-buttons">
+            <button (click)="incrementLikes(post?.id)">
+              <img
+                class="reaction-icon"
+                src="../../assets/likewhite.png"
+                alt=""
+              />
+              {{ post?.likes }}
+            </button>
+            <button (click)="incrementDislikes(post?.id)">
+              <img
+                class="reaction-icon"
+                src="../../assets/dislikewhite.png"
+                alt=""
+              />
+              {{ post?.dislikes }}
+            </button>
+          </div>
+          <div class="comments-section">
+            <p>Comments</p>
+            <ul>
+              <li *ngFor="let comment of comments">" {{ comment }} "</li>
+            </ul>
+            <input placeholder="What did you think about this book?" type="text" [(ngModel)]="newComment" (keyup.enter)="addComment()"/>
+            <button (click)="addComment()">Add Comment</button>
+          </div>
         </div>
       </div>
     </div>

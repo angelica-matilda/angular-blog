@@ -12,6 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IndividualBlogPostComponent } from './individual-blog-post/individual-blog-post.component';
 import { BlogPostsService } from './services/blog-posts.service';
 import { SliceWordsPipe } from './slice-bodytext.pipe';
+import { ToTopButtonComponent } from './to-top-button/to-top-button.component';
+import { LoginComponent } from './login/login.component';
+import { AuthenticationService } from './services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { SliceWordsPipe } from './slice-bodytext.pipe';
     AboutComponent,
     CreateComponent,
     IndividualBlogPostComponent,
-    SliceWordsPipe
+    SliceWordsPipe,
+    ToTopButtonComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,9 @@ import { SliceWordsPipe } from './slice-bodytext.pipe';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [BlogPostsService],
+  providers: [
+    BlogPostsService,
+    AuthenticationService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

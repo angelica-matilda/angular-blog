@@ -22,6 +22,7 @@ export class AboutComponent {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
       console.log('User Input:', formData);
+      alert('Thanks for reaching out! I\'ll answer as soon as I finish my book')
 
       // Clear the form inputs
     this.contactForm.reset();
