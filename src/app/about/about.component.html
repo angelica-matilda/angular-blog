@@ -1,15 +1,20 @@
 <div class="full-page">
   <div class="about-container">
     <div class="content-box">
-      <div class="about-content">
-        <img src="../../assets/aboutme.jpeg" />
+      <div class="blog-content">
         <h2 class="aboutme-header">About Me</h2>
-        <p>
-          Hello, and welcome to my little corner of the internet! I'm Angelica,
-          the passionate bookworm behind this blog. I'm thrilled to have you
-          here, and I can't wait to share my love for books with you.
-        </p>
-        <br />
+        <div class="image-and-text">
+          <div class="text-wrap">
+            <p class="wrapped-text">
+              <strong>Hello,</strong> and welcome to my little corner of the
+              internet! I'm Angelica, the passionate bookworm behind this blog.
+              I'm thrilled to have you here, and I can't wait to share my love
+              for books with you.
+            </p>
+          </div>
+          <img class="girl-reading" src="../../assets/girlreadingbook.jpeg" />
+        </div>
+
         <p>
           Ever since I can remember, I've been captivated by the magic of the
           written word. Books have been my faithful companions, transporting me
@@ -57,37 +62,44 @@
         <p>Warmest regards, Angelica</p>
       </div>
     </div>
-    <form [formGroup]="contactForm" class="content-box about-content" (ngSubmit)="onSubmit()">
-      <div class="row">
-        <div class="column">
-          <img src="../../assets/bookshelf.jpeg" />
-        </div>
-        <div class="column">
-          <h3>Stay Connected.</h3>
-          <label for="name">Enter your name</label><br />
-          <input
+
+    <form
+      [formGroup]="contactForm"
+      class="content-box"
+      (ngSubmit)="onSubmit()"
+    >
+      <div class="form-box">
+        <div class="row">
+          <div class="column">
+            <img class="connect-img" src="../../assets/connect-image.jpeg" />
+          </div>
+          <div class="column">
+            <h3>Stay Connected.</h3>
+            <label for="name">Enter your name</label><br />
+            <input
             type="text"
             id="name"
             name="name"
             formControlName="name"
-          /><br />
-          <label for="email">Enter your email address</label><br />
-          <input
+            /><br />
+            <label for="email">Enter your email address</label><br />
+            <input
             type="email"
             id="email"
             name="email"
             formControlName="email"
-          /><br />
-          <label for="message">What is your favourite book?</label><br />
-          <input
+            /><br />
+            <label for="message">What is your favourite book?</label><br />
+            <input
             type="text"
             id="message"
             name="message"
             formControlName="message"
-          /><br />
-          <button type="submit" [disabled]="!contactForm.valid">
-            Connect now >
-          </button>
+            /><br />
+            <button type="submit" [disabled]="!contactForm.valid">
+              Connect now >
+            </button>
+          </div>
         </div>
       </div>
     </form>

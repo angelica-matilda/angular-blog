@@ -24,7 +24,6 @@ export class LoginComponent {
     }
   }
 
-
   logout(): void {
     // Call the logout method from the authentication service
     this.authService.logout();

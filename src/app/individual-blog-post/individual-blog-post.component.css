@@ -1,3 +1,16 @@
+.blog-container {
+  width: 65vw; /* remove this div?*/
+}
+
+.blog-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3.125rem;
+  padding: 1.25rem;
+}
+
 h2 {
   margin: 2.5rem 0rem 2.5rem 0rem;
   font-size: 1.25rem;
@@ -8,11 +21,11 @@ h2 {
 
 img {
   height: 25rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
 }
 
 .book-image {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .created-date {
@@ -20,33 +33,20 @@ img {
   color: gray;
 }
 
-.blog-container {
-  width: 65vw; /* remove this div?*/
-}
-
-.blog-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 50px;
-  padding: 20px;
-}
-
-.reaction-icon {
-  height: 25px;
-  border: none;
-  box-shadow: none;
-  margin-right: 10px;
-}
-
 .reaction-buttons {
   display: flex;
   justify-content: flex-end;
 }
 
+.reaction-icon {
+  height: 1.5625rem;
+  border: none;
+  box-shadow: none;
+  margin-right: 0.625rem;
+}
+
 .reaction-buttons button {
-  margin-right: 10px; /* Add margin between buttons */
+  margin-right: 0.625rem; /* Add margin between buttons */
 }
 
 /* Comments */
@@ -58,22 +58,11 @@ img {
   border-radius: 0.5rem;
 }
 
-.comments-section input {
-  margin-top: 1rem;
-  height: 3rem;
-  width: 19rem;
-  font-size: 0.9rem;
-  padding: 0.5rem;
-  background-color: #CCCCCC;
-  border: none;
-  border-radius: 0.5rem;
-}
-
 .comments-section p {
   color: white;
   font-size: 1.25rem;
   font-weight: bold;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .comments-section ul {
@@ -86,8 +75,15 @@ img {
   margin-bottom: 0.5rem;
 }
 
+.comments-section textarea { /* comment-textarea?*/
+  margin-top: 1rem;
+  height: 3rem;
+  width: 19rem;
+  padding: 0.5rem;
+}
+
 .comments-section input,
 .comments-section button {
   margin-top: 1rem;
-  margin-right: 10px;
+  margin-right: 0.635rem;
 }

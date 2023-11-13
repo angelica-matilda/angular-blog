@@ -1,0 +1,43 @@
+.full-page {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-box {
+  background-color: #665e5e;
+  margin: 1.25rem; /* not applied to every side*/
+  width: 65vw;
+  box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
+}
+
+.blog-content {
+  display: flex;
+  margin: 3.125rem;
+  padding: 1.25rem;
+  flex-direction: column;
+}
+
+.title-input {
+  height: 1.7rem;
+}
+
+p {
+  color: black;
+}
+
+p, h2 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: 1.875rem;
+}
+

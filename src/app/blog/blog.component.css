@@ -11,7 +11,7 @@
 .blog-text {
   margin-left: 3.125rem;
   display: flex;
-  flex-direction: column; /* Stack items vertically */
+  flex-direction: column;
   flex: 1;
 }
 
@@ -23,7 +23,7 @@
 
 h2 {
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   font-size: larger;
 }
 
@@ -31,7 +31,7 @@ h2 {
   height: 25rem;
   min-width: 20rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
-  max-width: 80%; /* Add this line to ensure images don't exceed their container */
+  max-width: 80%;
 }
 
 @media (max-width: 900px) {
@@ -39,14 +39,14 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.25rem; /* Adjust the padding as needed */
+    padding: 1.25rem;
   }
 
   .blog-text {
-    margin-top: 20px;
+    margin-top: 1.25rem;
   }
 
   .button-container {
-    margin-top: 1rem; /* Adjust the margin as needed */
+    margin-top: 1rem;
   }
 }

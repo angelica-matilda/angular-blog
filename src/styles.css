@@ -37,6 +37,13 @@ ul {
   box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
 }
 
+textarea, input {
+  background-color: #CCCCCC;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+}
+
 button {
   transition: all 0.4s ease-in;
   margin-top: 0.625rem;

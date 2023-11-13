@@ -18,13 +18,12 @@ ul li:not(:first-child) {
   margin-left: 1.875rem;
 }
 
+img {
+  height: 1.5625rem;
+}
 
 p {
   color: gray;
   font-size: smaller;
-  margin-top: 15px;
-}
-
-img {
-  height: 25px;
+  margin-top: 0.9375rem;
 }

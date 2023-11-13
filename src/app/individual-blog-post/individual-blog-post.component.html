@@ -1,7 +1,8 @@
 <main class="full-page">
   <div class="blog-container">
-    <div class="content-box">
+    <div class="content-box" *ngIf="post">
       <div class="blog-content">
+        <button *ngIf="isLoggedIn()" (click)="deletePost(post.id)">Delete Post</button>
         <h2>{{ post?.title }}</h2>
         <img
           class="book-image"
@@ -34,9 +35,21 @@
           <div class="comments-section">
             <p>Comments</p>
             <ul>
-              <li *ngFor="let comment of comments">" {{ comment }} "</li>
+              <li *ngFor="let comment of comments; let i = index">"
+                {{ comment }} "
+              <button *ngIf="isLoggedIn()" (click)="deleteComment(i)">X</button>
+              </li>
             </ul>
-            <input placeholder="What did you think about this book?" type="text" [(ngModel)]="newComment" (keyup.enter)="addComment()"/>
+            <textarea
+              placeholder="What are your thoughts?"
+              type="text"
+              [(ngModel)]="newComment"
+              (keyup.enter)="addComment()"
+              rows="4"
+              cols="30"
+              maxlength="50"
+            >
+            </textarea>
             <button (click)="addComment()">Add Comment</button>
           </div>
         </div>

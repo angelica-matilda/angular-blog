@@ -1,14 +1,27 @@
 <div class="full-page">
-  <div class="blog-container">
-    <div class="content-box">
-      <div class="blog-content">
-        <p>Only Admin have access to login</p>
-        <label for="username">Username:</label>
-        <input type="text" id="username" [(ngModel)]="username" required (keyup.enter)="login()" /><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" [(ngModel)]="password" required (keyup.enter)="login()" /><br>
-        <button (click)="login()">Login</button>
-      </div>
+  <div class="content-box">
+    <div class="blog-content">
+      <p>Only Admin have access to login</p>
+      <label for="username"><strong>Username:</strong></label>
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="username"
+        required
+        (keyup.enter)="login()"
+        maxlength="25"
+      /><br />
+
+      <label for="password"><strong>Password:</strong></label>
+      <input
+        type="password"
+        id="password"
+        [(ngModel)]="password"
+        required
+        (keyup.enter)="login()"
+        maxlength="25"
+      /><br />
+      <button (click)="login()">Login</button>
     </div>
   </div>
 </div>

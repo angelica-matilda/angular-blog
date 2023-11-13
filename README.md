@@ -15,6 +15,8 @@ Todo:
 - Design about
 - Clear input field for comment while pressed
 - switch "login" to logout as soon as logged in
+- strukturera css filer
+-limit input length
 
 Done:
 KLAR Navbar
@@ -28,18 +30,4 @@ KLAR Page for individual posts
         - comments
         - Functionality to add comments
 
-Bloggsidan skall minst innehålla:
-
-Ägarens perspektiv innehåller allt som användaren har, men har en till vy:
-En till vy för att skapa nya inlägg på valfritt sätt.
-
-Blogginlägg
-Alla blogginlägg har följande struktur (men du får gärna lägga till fler saker):
-
-
 De skall sparas i localStorage för att du skall kunna ladda om Appen utan att tappa bort dem. Implementera detta på valfritt sätt.
-
-Övrig information
-Det finns ingen "inloggning" och inga användare även om det finns ett användarperspektiv
-Lägg gärna till fler saker i Appen
-När man är inne på användarens perspektiv så ser man inget ifrån ägarens perspektiv.
