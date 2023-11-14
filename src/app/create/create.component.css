@@ -11,6 +11,7 @@
   margin: 1.25rem; /* not applied to every side*/
   width: 65vw;
   box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
+  margin-top: 3.125rem;
 }
 
 .blog-content {
@@ -41,3 +42,32 @@ p {
   margin-bottom: 1.875rem;
 }
 
+input[type="file"] {
+  color: gray;
+}
+
+label {
+  margin-bottom: 0.2rem;
+  color: black;
+}
+
+textarea {
+  padding: 0.3125rem;
+}
+
+button {
+  width: 6.25rem;
+  align-self: center;
+}
+
+img {
+  height: 25rem;
+  width: 20rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
+}
+
+.success-message {
+  font-size: 1.5625rem;
+  color: darkgray;
+  margin-top: 0.9375rem;
+}

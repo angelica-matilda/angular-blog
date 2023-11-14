@@ -32,7 +32,7 @@ ul {
 
 .content-box {
   background-color: #665E5E;
-  margin: 1.25rem; /* not applied to every side*/
+  margin: 1.25rem;
   width: 65vw;
   box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
 }

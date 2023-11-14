@@ -19,6 +19,10 @@ h2 {
   border-bottom: 0.125rem solid #cccccc;
 }
 
+.delete-button {
+  align-self: flex-end;
+}
+
 img {
   height: 25rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0rem 0.3125rem 0.9375rem;
@@ -33,9 +37,12 @@ img {
   color: gray;
 }
 
+/* Reaction buttons */
+
 .reaction-buttons {
   display: flex;
   justify-content: flex-end;
+  margin-top: 1rem;
 }
 
 .reaction-icon {
@@ -54,7 +61,7 @@ img {
 .comments-section {
   margin-top: 2rem;
   padding: 2rem;
-  background-color: #444; /* Choose a background color */
+  background-color: #444;
   border-radius: 0.5rem;
 }
 
@@ -75,15 +82,22 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.comments-section textarea { /* comment-textarea?*/
-  margin-top: 1rem;
+/* Add comment */
+
+.new-comment {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.comments-section  textarea {
   height: 3rem;
   width: 19rem;
   padding: 0.5rem;
 }
 
-.comments-section input,
-.comments-section button {
-  margin-top: 1rem;
-  margin-right: 0.635rem;
+.add-comment-btn {
+  margin-top: 0;
+  margin-left: 1rem;
 }
+

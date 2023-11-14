@@ -1,3 +1,7 @@
+.content-box {
+  margin-top: 3.125rem;
+}
+
 .blog-content {
   display: flex;
   margin: 3.125rem;
@@ -17,7 +21,7 @@ label {
 }
 
 input {
-  height: 1.7rem; /* Adjust the value according to your preference */
+  height: 1.7rem; 
   width: 15rem;
 }
 

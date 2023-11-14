@@ -90,14 +90,15 @@
             formControlName="email"
             /><br />
             <label for="message">What is your favourite book?</label><br />
-            <input
+            <textarea
             type="text"
             id="message"
             name="message"
             formControlName="message"
-            /><br />
+            rows="5"
+            ></textarea><br />
             <button type="submit" [disabled]="!contactForm.valid">
-              Connect now >
+              Connect
             </button>
           </div>
         </div>

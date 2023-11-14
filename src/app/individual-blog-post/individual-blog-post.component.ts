@@ -18,7 +18,7 @@ export class IndividualBlogPostComponent implements OnInit {
     private route: ActivatedRoute,
     private BlogPostsService: BlogPostsService,
     private authService: AuthenticationService,
-    private router: Router // Inject the Router service
+    private router: Router 
   ) {}
 
   ngOnInit(): void {
@@ -38,11 +38,10 @@ export class IndividualBlogPostComponent implements OnInit {
     if (isConfirmed) {
       this.BlogPostsService.deletePost(id);
       // Redirect to homepage if deleted post
-      this.router.navigate(['/']); // Change this to the appropriate route for your BlogComponent
+      this.router.navigate(['/']); 
     }
   }
 
-  // Call this function when the like button is clicked
   incrementLikes(id: number | undefined): void {
     if (id !== undefined) {
       this.BlogPostsService.incrementLikes(id);
@@ -53,7 +52,7 @@ export class IndividualBlogPostComponent implements OnInit {
   incrementDislikes(id: number | undefined): void {
     if (id !== undefined) {
       this.BlogPostsService.incrementDislikes(id);
-      this.post = this.BlogPostsService.getBlogPostById(id); // Update the post with the updated likes count
+      this.post = this.BlogPostsService.getBlogPostById(id); 
     }
   }
 

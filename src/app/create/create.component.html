@@ -3,7 +3,8 @@
     <div class="blog-content">
       <h2>Write your blog post</h2>
       <p>What did you read recently?</p>
-      <input type="file" (change)="onFileChange($event)" required /><br />
+      <label for="upload"><strong>Picture:</strong></label>
+      <input id="upload" type="file" (change)="onFileChange($event)" required /><br />
       <img
         id="previewImage"
         [src]="thumbnailUrl"
@@ -11,24 +12,28 @@
         *ngIf="thumbnailUrl"
       /><br />
 
+      <label for="title"><strong>Title:</strong></label>
       <input
         type="text"
+        id="title"
         [(ngModel)]="title"
-        placeholder="Title..."
+        placeholder=" Write a captivating title for your blog post..."
         class="title-input"
         required
       /><br />
 
+      <label for="blog-content"><strong>Blog content:</strong></label>
       <textarea
+        id="blog-content"
         [(ngModel)]="body"
-        placeholder="Blog content..."
+        placeholder="Share your thoughts, experiences, or insights here..."
         rows="10"
         required
       ></textarea
       ><br />
       <button (click)="createPost()">Post</button>
       <!-- Display success message if post is created -->
-      <p *ngIf="postCreated">Post created successfully!</p>
+      <p class="success-message" *ngIf="postCreated">Post created successfully!</p>
     </div>
   </div>
 </div>
